@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>CherryCat</title>
+    <link rel="icon" type="image/x-icon" href="CherryCat.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b8b26c8b10.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/roadmap.css">
+
+    <style>
+        #section-01 {
+            height: 100%;
+        }
+
+        .section1-bg {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            z-index: -1;
+        }
+
+        .section1-content {
+            padding-top: 15%;
+            padding-left: 10%;
+        }
+
+        #section-02 {
+            min-height: 20vh;
+            height: 100%;
+            background-image: linear-gradient(180deg, #3C455A, #303451);
+        }
+
+        .section2-content {
+            text-align: center;
+            color: white;
+            padding: 5em 20%;
+        }
+
+        .section2-content>h2 {
+            margin-bottom: 2em;
+        }
+
+        #section-03 {
+            height: 100%;
+            background-image: linear-gradient(180deg, #303451, #231C44);
+            color: white;
+            text-transform: uppercase;
+        }
+
+        .section3-content {
+            max-width: 100%;
+        }
+
+        .section3-content>div:first-child {
+            padding-left: 8%;
+            padding-right: 5%;
+        }
+
+        .section3-content img {
+            width: 100%;
+        }
+
+        #section-04,
+        #section-04-alt {
+            height: 100%;
+            padding-top: 20%;
+            background-image: linear-gradient(180deg, #231C44, #27163B);
+        }
+
+        .section4-bg {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+
+        .section4-content {
+            max-width: 100%;
+            color: white;
+            margin-bottom: 3em;
+        }
+
+        .section4-content * {
+            z-index: 1;
+        }
+
+        .section4-bg-alt {
+            width: 100%;
+            height: auto;
+            z-index: 0;
+        }
+
+        #section-05 {
+            min-height: 50vh;
+            height: 100%;
+            padding: 10% 15%;
+            background-image: linear-gradient(180deg, #407889, #396886);
+        }
+
+        .section5-box {
+            width: 24pc;
+            height: auto;
+            background-image: linear-gradient(180deg, #7c9eb9, #41698f);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false">
+    <div class="loading">
+        <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+                stroke="var(--secondary)" stroke-width="2"></path>
+            <path
+                d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+                stroke="var(--secondary)" stroke-width="2"></path>
+            <path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd"
+                d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z">
+            </path>
+            <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" stroke="var(--secondary)"></path>
+            <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    </div>
+
+    <div class="sections hide">
+        <div id="navbar" class="text-end">
+            <button type="button" id="mobile_menu_button">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="#about-us" class="navItem">About Us</a>
+            <a href="#roadmap" class="navItem">Roadmap</a>
+            <a href="#team" class="navItem">Team</a>
+            <a href="#faqs" class="navItem">FAQs</a>
+            <a href="#contact-us" class="navItem">Contact Us</a>
+        </div>
+        <div id="navbar_mobile">
+            <div class="navbar_mobile_content">
+                <a href="#about-us" class="navItem">About Us</a>
+                <a href="#roadmap" class="navItem">Roadmap</a>
+                <a href="#team" class="navItem">Team</a>
+                <a href="#faqs" class="navItem">FAQs</a>
+                <a href="#contact-us" class="navItem">Contact Us</a>
+            </div>
+            <button type="button" id="mobile_menu_button_close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="position-fixed bottom-0 end-0 mb-3 me-3" style="z-index: 100;display: none;">
+            <img src="src/Logo_Fiks_black.png" alt="CherryCat Logo" class="CherryCatLogo_Fixed"
+                onclick="$(window).scrollTop(0);" />
+        </div>
+        <div id="section-01">
+            <img src="src/BG01-Website Cherrycat (fix1).jpg" class="section1-bg" />
+            <div class="section1-content">
+                <h1>CherryCat NFT</h1>
+                <p>Get your own Cherry Cat right now!</p>
+                <button type="button" class="btn mintBtn" data-bs-toggle="modal"
+                    data-bs-target="#mintModal">Mint</button>
+            </div>
+        </div>
+        <div id="about-us">
+            <div id="section-02">
+                <div class="section2-content">
+                    <h2>What is Cherry Cat?</h2>
+                    <p>
+                        Cherry Cat is not just a normal NFT collection, we're aiming to be the first changeable NFT with
+                        customizable clothing and accessories. There are 10.000 Cherry Cats available for you to mint
+                        right
+                        now. Cats that have been minted can be traded on OpenSea.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="section-03">
+            <div class="section3-content row justify-content-between">
+                <div class="col-lg-4 col-md-6 col-12 d-flex flex-column align-self-center">
+
+                    <div class="row justify-content-between pt-4">
+                        <div class="col-2">
+                            <video class="rarity_icon" style="border-radius: 0px;" autoplay loop muted
+                                disablePictureInPicture>
+                                <source src="src/rarity_icons/new/Background.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <h3>Background</h3>
+                    <p class="normal-font"></p>
+
+                    <div class="row justify-content-between pt-4">
+                        <div class="col-2">
+                            <video class="rarity_icon" autoplay loop muted disablePictureInPicture>
+                                <source src="src/rarity_icons/new/Headdress.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <h3>Headdress</h3>
+                    <p class="normal-font"></p>
+
+                    <div class="row justify-content-between pt-4">
+                        <div class="col-2">
+                            <video class="rarity_icon" autoplay loop muted disablePictureInPicture>
+                                <source src="src/rarity_icons/new/Eyes.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <h3>Eyes</h3>
+                    <p class="normal-font"></p>
+
+                    <div class="row justify-content-between pt-4">
+                        <div class="col-2">
+                            <video class="rarity_icon" autoplay loop muted disablePictureInPicture>
+                                <source src="src/rarity_icons/new/Expression.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <h3>Expressions</h3>
+                    <p class="normal-font"></p>
+
+                    <div class="row justify-content-between pt-4">
+                        <div class="col-2">
+                            <video class="rarity_icon" autoplay loop muted disablePictureInPicture>
+                                <source src="src/rarity_icons/new/Body.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <h3>Body</h3>
+                    <p class="normal-font"></p>
+
+                    <div class="row justify-content-between pt-4">
+                        <div class="col-2">
+                            <video class="rarity_icon" autoplay loop muted disablePictureInPicture>
+                                <source src="src/rarity_icons/new/Costume.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <h3>Costume</h3>
+                    <p class="normal-font"></p>
+
+                    <div class="row justify-content-between pt-4">
+                        <div class="col-10">
+                            <img alt="gender_icon" src="src/Gender.png" />
+                        </div>
+                    </div>
+                    <h3>Gender</h3>
+                    <p class="normal-font"></p>
+                </div>
+                <div class="col-lg-8 col-md-6 col-12 align-self-center">
+                    <img src="src/BG02 ALternatif.png" />
+                </div>
+            </div>
+        </div>
+        <div id="roadmap">
+            <div class="container">
+                <h2 class="text-center mt-3 mb-5" style="color: white;">Roadmap</h2>
+                <div class="timeline">
+                    <div class="timeline-row">
+                        <div class="timeline-time">
+                            25% Milestone<small>Phase 1</small>
+                        </div>
+                        <div class="timeline-content">
+                            <i class="icon-attachment"></i>
+                            <h4>Giveaway!</h4>
+                            <p class="normal-font" style="letter-spacing: 0.04em">
+                                We will be giving out <span class="fw-bold">10 CherryCats</span> to our discord members,
+                                and a total amount of <span class="fw-bold">5 ETH</span> for 5 random OG CherryCat
+                                owners with <span class="fw-bold">1 ETH</span> each.
+                            </p>
+                            <div class="">
+                                <span class="badge badge-pill">10 CherryCats</span>
+                                <span class="badge badge-pill">1 ETH x5</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row">
+                        <div class="timeline-time">
+                            50% Milestone<small>Phase 2</small>
+                        </div>
+                        <div class="timeline-content">
+                            <i class="icon-code"></i>
+                            <h4>CherryCat App!</h4>
+                            <p class="normal-font" style="letter-spacing: 0.04em">
+                                We will be launching <span class="fw-bold">CherryCat App</span> where it will allow
+                                CherryCat owners to see and interact with their own cat/cats (based on their NFT
+                                properties) by giving them custom clothes, hats, accessories, as well as feeding them to
+                                keep them happy and healthy.
+                            </p>
+                            <div class="">
+                                <span class="badge badge-pill">Interaction</span>
+                                <span class="badge badge-pill">Game</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row">
+                        <div class="timeline-time">
+                            75% Milestone<small>Phase 3</small>
+                        </div>
+                        <div class="timeline-content">
+                            <i class="icon-turned_in_not"></i>
+                            <h4>CherryCat Token!</h4>
+                            <p class="normal-font" style="letter-spacing: 0.04em">
+                                We will have the biggest update for <span class="fw-bold">CherryCat App</span> where we
+                                will be introducing <span class="fw-bold">CherryCat Token</span> as our main currency.
+                                Owners can earn or spend them in-game for rarer items.
+                            </p>
+                            <div>
+                                <span class="badge badge-pill">New Tokens</span>
+                                <span class="badge badge-pill">Staking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row">
+                        <div class="timeline-time">
+                            100% Milestone<small>Phase 4</small>
+                        </div>
+                        <div class="timeline-content">
+                            <i class="icon-directions"></i>
+                            <h4>CherryCat Foundation!</h4>
+                            <p class="normal-font" style="letter-spacing: 0.04em">
+                                We will be launching a <span class="fw-bold">foundation</span> around the world to
+                                ensure that most of the stray cats have nice and warm <span class="fw-bold">shelters and
+                                    delicious meals</span>.
+                            </p>
+                            <div>
+                                <span class="badge badge-pill">Foundation</span>
+                                <span class="badge badge-pill">Love Cats</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row">
+                        <div class="timeline-content">
+                            <p class="m-0">CherryCat and Beyond...</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="team">
+            <div id="section-team">
+                <h1 class="text-center">&lt;&lt; The Team &gt;&gt;</h1>
+                <div class="container mt-5">
+                    <div class="team_images text-center">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-md-4 team_image_col">
+                                <video class="img-fluid team_image" autoplay loop muted disablePictureInPicture>
+                                    <source src="src/team/Iron_Cat.mp4" type="video/mp4">
+                                </video>
+                                <h6 class="h4 team_name">Iron Cat</h6>
+                                <p>Goes pew pew</p>
+                            </div>
+                            <div class="col-6 col-md-4 team_image_col">
+                                <img src="src/team/Advertising_Cat.jpg" alt="team member"
+                                    class="img-fluid team_image" />
+                                <h6 class="h4 team_name">Advertising Cat</h6>
+                                <p></p>
+                            </div>
+                            <div class="col-6 col-md-4 team_image_col">
+                                <video class="img-fluid team_image" autoplay loop muted disablePictureInPicture>
+                                    <source src="src/team/Tech_Cat.mp4" type="video/mp4">
+                                </video>
+                                <h6 class="h4 team_name">Tech Cat</h6>
+                                <p>Tired of bugs</p>
+                            </div>
+                            <div class="col-6 col-md-4 team_image_col">
+                                <img src="src/team/Sachio.jpg" alt="team member" class="img-fluid team_image" />
+                                <h6 class="h4 team_name">SCIO</h6>
+                                <p></p>
+                            </div>
+                            <div class="col-6 col-md-4 team_image_col">
+                                <img src="src/team/Janitor_Cat.jpg" alt="team member" class="img-fluid team_image" />
+                                <h6 class="h4 team_name">Janitor Cat</h6>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="faqs">
+            <div id="section-04">
+                <img src="src/BG03_ALternatif_fixed.png" class="section4-bg" />
+                <div class="section4-content row justify-content-end">
+                    <div class="col-lg-5 col-md-6 col-8">
+                        <p class="h6">F.A.Q</p>
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="accordian" id="faqSection">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="section-04-alt" style="display: none;">
+                <div class="section4-content row justify-content-center">
+                    <div class="col-10">
+                        <p class="h6">F.A.Q</p>
+                        <h3>Frequently Asked Questions</h3>
+                        <div class="accordian" id="faqSection_m">
+                        </div>
+                    </div>
+                </div>
+                <img src="src/BG03_ALternatif_fixed.png" class="section4-bg-alt" />
+            </div>
+        </div>
+        <div id="contact-us">
+            <div id="section-05">
+                <div class="section5-content row justify-content-center">
+                    <div class="col-lg-5 col-md-6 col-12 section5-box text-center py-5">
+                        <p class="h6">Contact Us</p>
+                        <p class="normal-font">
+                            Lorem ipsum dolor sit amet, at ultricies sapien consequat et. Morbi tempor tellus.
+                        </p>
+                        <p class="h6 pb-3">cherrycatnft@gmail.com</p>
+                        <div class="d-flex flex-row justify-content-around mb-2">
+                            <a class="contact-us-icon" href="mailto:cherrycatnft@gmail.com">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        d="M384 32H64C28.63 32 0 60.63 0 96v320c0 35.38 28.62 64 64 64h320c35.38 0 64-28.62 64-64V96C448 60.63 419.4 32 384 32zM384 336c0 17.67-14.33 32-32 32H96c-17.67 0-32-14.33-32-32V225.9l138.5 69.27C209.3 298.5 216.6 300.2 224 300.2s14.75-1.688 21.47-5.047L384 225.9V336zM384 190.1l-152.8 76.42c-4.5 2.25-9.812 2.25-14.31 0L64 190.1V176c0-17.67 14.33-32 32-32h256c17.67 0 32 14.33 32 32V190.1z" />
+                                </svg>
+                            </a>
+                            <a class="contact-us-icon" target="_blank" href="https://twitter.com/CherryCatnft">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
+                                </svg>
+                            </a>
+                            <a class="contact-us-icon" target="_blank" href="https://www.instagram.com/cherrycatnft/">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+                                </svg>
+                            </a>
+                            <a class="contact-us-icon" target="_blank"
+                                href="https://www.youtube.com/channel/UCxmd1oRCamuK1UMd1EvDUbA">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                    <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                    <path
+                                        d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mintModal" tabindex="-1" aria-labelledby="mintModal" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h2 id="mintTitle">Mint your CherryCat NFT</h2>
+                    <br>
+                    <h5>Supply: <span id="totalSupply">0/0</span></h5>
+                    <h5>Quantity: 1</h5>
+                    <h5>Price: <span id="mintPrice">0.00</span> ETH</h5>
+                    <button type="button" class="btn mintBtn px-4" id="mint_button"></button>
+                    <br>
+                    <br>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCEL</button>
+                </div>
+                <img src="src/popup/Cherry tree left.png" class="tree-top-left" />
+                <img src="src/popup/Cherry tree right.png" class="tree-top-right" />
+                <img src="src/popup/Sunflower.png" class="flower-bottom-left" />
+                <img src="src/popup/Star1.png" class="star-bottom-left" />
+                <img src="src/popup/Star2.png" class="star-bottom-right" />
+                <img src="src/popup/Cat1.png" class="cat1" />
+                <img src="src/popup/Cat2.png" class="cat2" />
+                <img src="src/popup/Cactus.png" class="cactus" />
+                <img src="src/popup/Cat hand 2.png" class="catpaw-bottom-right-1" />
+                <img src="src/popup/Cat hand 1.png" class="catpaw-bottom-right-2" />
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="js/global.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
